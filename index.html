@@ -10,7 +10,20 @@ header{background:var(--green);color:white;padding:18px 15px;text-align:center}h
 nav{display:flex;overflow:auto;background:white;position:sticky;top:0;z-index:2;border-bottom:1px solid #ddd}nav button{border:0;background:white;padding:13px 14px;white-space:nowrap;font-weight:bold;color:#315344}nav button.active{color:var(--green);border-bottom:3px solid var(--green)}
 main{max-width:900px;margin:auto;padding:14px}.panel{display:none}.panel.active{display:block}.card{background:white;border-radius:12px;padding:15px;margin:12px 0;box-shadow:0 1px 5px #0001}h2{font-size:20px;margin:4px 0 12px}h3{margin:5px 0 10px}label{display:block;font-weight:bold;margin:10px 0 5px}input,select,textarea{width:100%;padding:11px;border:1px solid #cbd6cf;border-radius:8px;font-size:16px;background:white}button.action{background:var(--green);color:white;border:0;border-radius:8px;padding:11px 15px;font-size:15px;font-weight:bold;margin:10px 5px 0 0}button.secondary{background:#e7eee9;color:#17452e}.row{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px}.stat{background:var(--light);padding:12px;border-radius:9px}.stat b{display:block;font-size:22px;margin-top:4px}table{border-collapse:collapse;width:100%;margin-top:10px}th,td{border-bottom:1px solid #e0e7e2;padding:9px;text-align:left}th{background:#f0f5f1}.scroll{overflow:auto}.hint{color:#52665a;font-size:13px}.success{color:#176b45;font-weight:bold}.danger{color:#a33}footer{text-align:center;padding:20px;color:#64756b;font-size:12px}
 </style></head>
-<body><header><input id="nomEcole" value="EPP FENI" onchange="localStorage.setItem('nomEcole',this.value)" style="font-size:24px;text-align:center;font-weight:bold;width:90%;padding:8px"><input id="titreApp" value="Gestion de la cantine scolaire" onchange="localStorage.setItem('titreCantine',this.value)" style="font-size:18px;text-align:center;width:90%;padding:8px"></header>
+
+<body>
+<header>
+<input id="nomEcole" value="EPP FENI"
+onchange="localStorage.setItem('nomEcole',this.value)"
+oninput="localStorage.setItem('nomEcole',this.value)"
+style="font-size:24px;text-align:center;font-weight:bold;width:90%;padding:8px">
+
+<input id="titreApp" value="Gestion de la cantine scolaire"
+onchange="localStorage.setItem('titreCantine',this.value)"
+oninput="localStorage.setItem('titreCantine',this.value)"
+style="font-size:18px;text-align:center;width:90%;padding:8px">
+</header>
+</body>
 <nav id="nav">
 <button class="active" data-tab="accueil">Accueil</button><button data-tab="effectifs">Effectifs</button><button data-tab="repas">Repas</button><button data-tab="stock">Stock</button><button data-tab="depenses">Dépenses</button><button data-tab="fournisseurs">Fournisseurs</button><button data-tab="bilan">Bilan</button>
 </nav>
