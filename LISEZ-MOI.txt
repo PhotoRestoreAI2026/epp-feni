@@ -1,0 +1,1 @@
+Application EPP FENI. Téléverser tous les fichiers du dossier sur GitHub Pages. L'application fonctionne dans Chrome et peut être installée depuis le menu Chrome après publication HTTPS.
