@@ -43,7 +43,9 @@ style="font-size:18px;text-align:center;width:90%;padding:8px">
  const t=document.getElementById('titreApp');
  e.value=localStorage.getItem('nomEcole')||'EPP FENI';
  t.value=localStorage.getItem('titreCantine')||'Gestion de la cantine scolaire';
-});<script>
+});
+</script>
+<script>
 const $=id=>document.getElementById(id), today=()=>new Date().toISOString().slice(0,10);
 let db=JSON.parse(localStorage.getItem('eppFeniDB')||'{"effectifs":{},"meals":{},"stock":{},"expenses":[],"deliveries":[]}');
 function persist(){localStorage.setItem('eppFeniDB',JSON.stringify(db));refresh()}
