@@ -38,7 +38,12 @@ style="font-size:18px;text-align:center;width:90%;padding:8px">
 <section id="fournisseurs" class="panel"><div class="card"><h2>Fournisseurs et livraisons</h2><label>Nom du fournisseur</label><input id="supplierName"><label>Contact</label><input id="supplierContact"><label>Produit livré</label><input id="deliveryProduct"><label>Quantité livrée</label><input type="number" id="deliveryQty" min="0"><button class="action" onclick="addDelivery()">Enregistrer la livraison</button><p id="supplierMsg"></p></div><div class="card"><h3>Historique des livraisons</h3><div id="deliveryList"></div></div></section>
 <section id="bilan" class="panel"><div class="card"><h2>Bilan du jour</h2><label>Date du bilan</label><input type="date" id="reportDate"><div id="report"></div><button class="action" onclick="window.print()">Imprimer / PDF</button></div><div class="card"><h3>Sauvegarde des données</h3><p>Exporter une copie de tes données pour les conserver ou les transférer.</p><button class="action" onclick="backup()">Télécharger la sauvegarde</button><label>Restaurer une sauvegarde</label><input type="file" id="restoreFile" accept="application/json"><button class="action secondary" onclick="restore()">Restaurer</button><p id="backupMsg" class="hint"></p></div></section>
 </main><footer>EPP FENI · Application de gestion de cantine</footer>
-<script>
+window.addEventListener('DOMContentLoaded',()=>{
+ const e=document.getElementById('nomEcole');
+ const t=document.getElementById('titreApp');
+ e.value=localStorage.getItem('nomEcole')||'EPP FENI';
+ t.value=localStorage.getItem('titreCantine')||'Gestion de la cantine scolaire';
+});<script>
 const $=id=>document.getElementById(id), today=()=>new Date().toISOString().slice(0,10);
 let db=JSON.parse(localStorage.getItem('eppFeniDB')||'{"effectifs":{},"meals":{},"stock":{},"expenses":[],"deliveries":[]}');
 function persist(){localStorage.setItem('eppFeniDB',JSON.stringify(db));refresh()}
