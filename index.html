@@ -28,7 +28,7 @@ oninput="localStorage.setItem('titreCantine',this.value)"
 style="font-size:18px;text-align:center;width:90%;padding:8px">
 </header>
  <div style="text-align:center; margin:15px;">
-<img src="file_00000000628881f4814b76095a1bf941.png" alt="Cantine scolaire" style="width:120px;height:auto;"><nav id="nav">
+<img src="file_logo.png" alt="Cantine scolaire" style="width:120px;height:auto;"><nav id="nav">
 <button class="active" data-tab="accueil">Accueil</button><button data-tab="effectifs">Effectifs</button><button data-tab="repas">Repas</button><button data-tab="stock">Stock</button><button data-tab="depenses">Dépenses</button><button data-tab="fournisseurs">Fournisseurs</button><button data-tab="bilan">Bilan</button>
 </nav>
 <main>
@@ -45,7 +45,7 @@ style="font-size:18px;text-align:center;width:90%;padding:8px">
 <script>window.addEventListener('DOMContentLoaded',()=>{
  const e=document.getElementById('nomEcole');
  const t=document.getElementById('titreApp');
- e.value=localStorage.getItem('nomEcole')||'EPP FENI';
+ e.value=localStorage.getItem('nomEcole')||'';
  t.value=localStorage.getItem('titreCantine')||'Gestion de la cantine scolaire';
 });
 </script>
